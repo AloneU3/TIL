@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <div id="app"> {{ message }} </div> <!-- {{ message }} data에 있는 메세지 출력 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#app', //이게 있어야 Vue를 div에서 사용가능 없으면 아무리 많이 만든다 해도 적용이 안됨
+                data: {
+                    message: 'hi'
+                }
+            });
+        </script>
+    </body>
+</html>

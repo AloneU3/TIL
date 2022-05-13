@@ -18,17 +18,28 @@
     //        //정의할 내용
     //    })        객체의 특정 속성의 동작을 재정의하는 것
 
-    Object.defineProperty(viewmodel, 'str', {
-        // 속성에 접근했을 때의 동작을 정의
-        get: function() {
-            console.log('접근');
-        },
-        // 속성에 값을 할당했을 때의 동작을 정의
-        set: function(newValue) {
-            console.log('할당', newValue);
-            div.innerHTML = newValue;   //Vue 핵심 Reactivity
+    (function() { //자바스크립트 즉시 실행 함수
+        function init() {
+            Object.defineProperty(viewmodel, 'str', {
+                // 속성에 접근했을 때의 동작을 정의
+                get: function() {
+                    console.log('접근');
+                },
+                // 속성에 값을 할당했을 때의 동작을 정의
+                set: function(newValue) {
+                    console.log('할당', newValue);
+                    render(newValue);   //Vue 핵심 Reactivity
+                }
+            });
         }
-    })
+
+        function render(value) {
+            div.innerHTML = value;
+        }
+
+        init();
+    })(); //외부로부터의 접근을 막아줌
+
     </script>
 </body>
 </html>
