@@ -17,23 +17,29 @@
 ## Root 컴포넌트
 
 - 인스턴스를 생성하면 그 인스턴스는 기본적으로 Root 컴포넌트가 됨
-  
-              Vue.component('app-header', {
-  
-                  template: '<h1>Header</h1>'
-  
-              });
-  
-  를 할당시 Root 컴포넌트 아래에 AppHeader라는 컴포넌트가 등록된다
-  
-  마찬가지로
-  
-              Vue.component('app-content', {
-  
-                  template: '<div>content</div>'
-  
-              });
-  
-  를 코드에 추가시 Root 컴포넌트 아래에 AppContent라는 컴포넌트가 등록된다
 
 
+
+## 전역 컴포넌트
+
+Vue.component('app-header', {
+
+                template: 'Header'
+
+            });
+
+를 할당시 Root 컴포넌트 아래에 AppHeader라는 컴포넌트가 등록된다
+
+마찬가지로
+
+            Vue.component('app-content', {
+
+                template: 'content'
+
+            });
+
+를 코드에 추가시 Root 컴포넌트 아래에 AppContent라는 컴포넌트가 등록된다
+
+## 지역 컴포넌트
+
+- 
