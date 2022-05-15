@@ -8,20 +8,23 @@
 </head>
 <body>
     <div id="app">
-        <app-header v-bind:propsdata="message"></app-header>
-        <app-content v-bind:propsdata="num"></app-content>
-        <!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> props 문법 -->
+        <app-header v-bind:propsdata="num"></app-header>
+        <app-content v-on:pass="deliverNum"></app-content>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         var appHeader = {
-            template: '<h1>{{ propsdata }}</h1>', //데이터 바인딩
+            template: '<div>header</div>',
             props: ['propsdata']
         }
         var appContent = {
-            template: '<div>{{ propsdata }}</div>',
-            props: ['propsdata']
+            template: '<div>content<button v-on:click="passNum">pass</button></div>',
+            methods: {
+                passNum: function() {
+                    this.$emit('pass', 10);
+                }
+            }
         }
 
         new Vue({
@@ -29,10 +32,14 @@
             components: {
                 'app-header': appHeader,
                 'app-content': appContent
-            }, //실습
+            },
             data: {
-                message: 'hi',
-                num: 10
+                num: 0
+            },
+            methods: {
+                deliverNum: function(value) { //pass에서 넘어오는 데이터를 value로 받아서 보낼 수 있음
+                    this.num = value;
+                }
             }
         })
     </script>
