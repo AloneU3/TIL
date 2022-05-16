@@ -7,9 +7,9 @@
 <script>
 import AppHeader from './components/AppHeader.vue'; //AppHeader에 있는 내용을 변수에 담는다
 
-var AppHeader = {
-  template: '<header><h1>Header</h1></header>'
-}
+//var AppHeader = {
+//  template: '<header><h1>Header</h1></header>'
+//}
 
 export default {
   data: function() {
