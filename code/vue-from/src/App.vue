@@ -1,14 +1,14 @@
 <template>
   <form v-on:submit.prevent="submitFrom"> <!-- .prevent 아래 event.preventDefault();와 동일 이동이나 새로고침 막아줌 -->
     <div>
-      <label for="username">id: </label>
+      <label for="username">id: </label> <!-- 데이터 연결 -->
       <input id="username" type="text" v-model="username">
     </div>
     <div>
       <label for="password">pw: </label>
       <input id="password" type="password" v-bind="password"> <!-- 데이터 연결 -->
     </div>
-    <button type="submit">login</button>
+    <button type="submit">login</button> <!-- Login 버튼 -->
   </form>
 </template>
 

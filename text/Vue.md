@@ -1,3 +1,13 @@
+# CLI
+
+- 만드는 법
+  
+  - vue create 이름(vue-from) CLI 만들기
+  
+  - cd  이름(vue-from) 선택
+  
+  - npm run serve 실행
+
 # 싱글 파일 컴포넌트(.vue)
 
 - HTML, CSS, Javascript를 한 파일에 관리할 수 있다
