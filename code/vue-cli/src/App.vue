@@ -1,6 +1,6 @@
 <template>
     <div>
-      {{ str }}
+      <app-header></app-header>
     </div>
 </template>
 
