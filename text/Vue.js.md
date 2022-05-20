@@ -1,6 +1,7 @@
 # Vue
 
 - MVVM 패턴의 뷰모델(ViewModel) 레이어에 해당하는 화면(View)단 라이브러리
+- #### Vue는 View에 해당
 
 #### MVVM
 
@@ -14,11 +15,11 @@
 
 ## Vue 특징
 
-- ###### DOM Listeners
+- ###### DOM Listeners (돔 리스너)
   
   View에서 발생한 이벤트를 Vue에서 잡아서 자바스크립트에 있는 데이터를 바꿔주거나 지정했던 특정 로직에서 작동하게 함
 
-- ###### Data Bindings
+- ###### Data Bindings (데이터 바인딩)
   
   자바스크립트에서 데이터가 변했을때 Vue에서 바로 화면에 반영
 
