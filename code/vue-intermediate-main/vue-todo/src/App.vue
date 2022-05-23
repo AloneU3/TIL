@@ -25,7 +25,7 @@ export default {
 
 <style>
 body {
-  text-align: center;
+  text-align: center; /*가운데 정렬 */
   background-color: #F6F6F6;
 }
 
@@ -38,7 +38,7 @@ button {
   border-style: groove;
 }
 .shadow {
-  box-shadow: 5px 10px 10px; /*그림자 효과 */
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03); /*그림자 효과 */
 }
 
 </style>
