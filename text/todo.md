@@ -21,5 +21,3 @@
 - localStorage.setItem( );
 
 - setItem이라는 API사용  키랑 벨류 값을 저장
-
-
